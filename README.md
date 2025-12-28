@@ -7,7 +7,7 @@ This repository documents my journey in Data Engineering, bridging the gap betwe
 ### The Framework
 All my projects follow this **9-Point Data Engineering Framework** to ensure consistency, scalability, and optimization.
 
-![9-Point Data Engineering Framework](../Assets/schema_9_point_de.png)
+![9-Point Data Engineering Framework](../Assets/schema_nine_points_de.png)
 
 ## 🎯 Objectives
 This is not just theory. Each scenario documented here represents a concrete step in mastering the data lifecycle:
