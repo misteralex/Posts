@@ -6,6 +6,22 @@ paginate: true
 footer: '@AF'
 backgroundColor: #0d1117
 style: |
+  .main-title {
+    font-size: 1.0em;
+    color: #88b6ff;
+    font-weight: 800;
+  }
+  .extra-title {
+    font-size: 1.0em;
+    color: #f53e48;
+    font-weight: 800;
+  }
+  .extra-title::before {
+    content: "☕";
+    margin-right: 0.25em;
+    color: #800000;
+    vertical-align: middle;
+  }
   section {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     padding: 50px;
@@ -30,8 +46,12 @@ style: |
   .lang-bar { font-size: 0.55em; color: #a5adba; margin-bottom: 20px; font-style: italic; }
   .intro-text { font-size: 0.8em; color: #ffffff; margin-top: 10px; font-weight: 300; }
   .item-group { margin-bottom: 25px; width: 100%; border-left: 4px solid #58a6ff; padding-left: 20px; }
-  .item-main { font-size: 0.85em; font-weight: bold; color: #ffffff; display: block; text-transform: uppercase; }
-  .item-sub { font-size: 0.65em; color: #a5adba; display: block; margin-top: 5px; }
+  .item-main { 
+    font-size: 0.85em; font-weight: bold; color: #ffffff; display: block; text-transform: uppercase;
+   }
+  .item-sub { 
+    font-size: 0.65em; color: #a5adba; display: block; margin-top: 5px;
+  }
   .grid-9 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,39 +79,39 @@ style: |
   .cloud-table b { color: #ffffff; }
   .translation-stack { margin-top: 5px; line-height: 1.2; }
   .small-lang { font-size: 0.8em; color: #a5adba; font-weight: normal; font-style: italic; display: block; }
----
 
-<!-- 
-![bg opacity:.4 brightness:.35](./01_scenario_background.png) 
--->
+---
 
 ![bg opacity:0.4 brightness:0.35](./01_scenario_background.png)
 
-# From Edge to Refined Intelligence 
-<div class="lang-bar">Connecting a device is no longer enough to call it 'smart'. The real challenge lies in real-time data refining: 
-  operating on milliwatts while ensuring total privacy at the edge <br> <br>
-  Des données orientées Cloud directement depuis les systèmes embarqués <br>
+# <span class="main-title">Smart Edge for Cloud-Ready Data</span>
+<div class="lang-bar">
+  Connecting a device is no longer enough to call it 'smart'. 
+  The real challenge lies in real-time data refining: 
+  operating on milliwatts while ensuring total privacy at the edge 
+<br> <br>
+  Des données orientées Cloud directement depuis les systèmes embarqués
   Dati orientati al Cloud direttamente dai dispositivi integrati
 </div>
 
-<br>
 <span style="font-size: 0.5em; color: #a5adba; font-style: italic;">
-Here some critical challenges and opportunities where embedded systems 
-design directly impacts the effectiveness of real-time data engineering 
-at the edge <br> <br>
+Below are some critical challenges — and opportunities — where embedded systems 
+design directly impacts the effectiveness of real-time data engineering at the edge
+<br>
+</span>
 
 ---
 
 <div class="grid-9">
-  <div class="grid-item"><strong>DATA COLLECTION <br> (Source)</strong><span>Capturing signals at the point of origin</span></div>
-  <div class="grid-item"><strong>DATA INGESTION <br> (Pipeline)</strong><span>Moving raw bits into system memory</span></div>
-  <div class="grid-item"><strong>DATA PROCESSING <br> (Refining)</strong><span>Transforming noisy waveforms into structured digital features</span></div>
-  <div class="grid-item"><strong>DATA QUALITY <br> (Validation)</strong><span>Ensuring data integrity before it ever leaves the silicon</span></div>
-  <div class="grid-item"><strong>DATA STORAGE <br> (Persistence)</strong><span>Efficient local persistence for fault-tolerant streaming</span></div>
-  <div class="grid-item"><strong>DATA ANALYTICS <br> (Intelligence)</strong><span>Shifting analytical compute to the milliwatt level</span></div>
-  <div class="grid-item"><strong>DATA TRANSFORMATION <br> (SYNTHESIS)</strong><span>Compressing complex signals into high-value smart payloads</span></div>
-  <div class="grid-item"><strong>DATA INTEGRATION <br> (Transport)</strong><span>Seamlessly connecting Edge nodes to Cloud Data Lakes</span></div>
-  <div class="grid-item"><strong>DATA GOVERNANCE <br> (Lifecycle)</strong><span>Managing the versioning and health of distributed intelligence</span></div>
+  <div class="grid-item"><strong>DATA COLLECTION <br> (Source)</strong><span>Capturing raw signals at the point of origin</span></div>
+  <div class="grid-item"><strong>DATA INGESTION <br> (Pipeline)</strong><span>Efficiently moving bits into local memory</span></div>
+  <div class="grid-item"><strong>DATA PROCESSING <br> (Refining)</strong><span>Transforming noisy waveforms into structured, meaningful features</span></div>
+  <div class="grid-item"><strong>DATA QUALITY <br> (Validation)</strong><span>Ensuring integrity before any data leaves the device</span></div>
+  <div class="grid-item"><strong>DATA STORAGE <br> (Persistence)</strong><span>Local buffering and temporary storage for fault-tolerant streaming</span></div>
+  <div class="grid-item"><strong>DATA ANALYTICS <br> (Intelligence)</strong><span>Lightweight computation at the milliwatt level, near the sensor</span></div>
+  <div class="grid-item"><strong>DATA TRANSFORMATION <br> (SYNTHESIS)</strong><span>Compressing and enriching data to high-value payloads</span></div>
+  <div class="grid-item"><strong>DATA INTEGRATION <br> (Transport)</strong><span>Sending only refined, relevant data to the cloud</span></div>
+  <div class="grid-item"><strong>DATA GOVERNANCE <br> (Lifecycle)</strong><span>Managing versions, metadata, and signal health on the edge</span></div>
 </div>
 
 ---
@@ -138,17 +158,24 @@ Refining the Cloud pipeline at the Edge: Intelligence at the point of origin
 
 <div class="item-group">
   <span class="item-main">High-speed data streaming</span>
-  <span class="item-sub">Low-latency data pipelines targeting deterministic sub-millisecond latency for real-time, cloud-native processing at the edge</span>
+  <span class="item-sub">
+  Low-latency data pipelines targeting deterministic sub-millisecond latency — an ideal design goal for real-time, 
+  cloud-native processing at the edge
+  </span>
 </div>
 
 <div class="item-group">
   <span class="item-main">Handling raw binary signals</span>
-  <span class="item-sub">On-device Data Validation | 99.9% Outlier Filtering</span>
+  <span class="item-sub">
+  On-device data validation and filtering to remove noise and outliers before cloud ingestion
+  </span>
 </div>
 
 <div class="item-group">
   <span class="item-main">Edge computing architecture</span>
-  <span class="item-sub">Edge-Native Architecture | 90% Bandwidth Reduction via Local Synthesis</span>
+  <span class="item-sub">
+  Edge-native architectures enabling local synthesis and significant bandwidth reduction before data reaches the cloud
+  </span>
 </div>
 
 ---
@@ -157,13 +184,17 @@ Refining the Cloud pipeline at the Edge: Intelligence at the point of origin
 <div class="line"></div>
 
 <div class="item-group">
-  <span class="item-main">Downsampling Smart</span>
-  <span class="item-sub">Reduce volume without losing entropy</span>
+  <span class="item-main">Smart downsampling</span>
+  <span class="item-sub">
+  Reducing data volume while preserving informational entropy
+  </span>
 </div>
 
 <div class="item-group">
   <span class="item-main">Local Aggregation</span>
-  <span class="item-sub">From raw signals to high-level events</span>
+  <span class="item-sub">
+  Transforming continuous raw signals into discrete, high-level events
+  </span>
 </div>
 
 ---
@@ -173,12 +204,16 @@ Refining the Cloud pipeline at the Edge: Intelligence at the point of origin
 
 <div class="item-group">
   <span class="item-main">Data Anonymization</span>
-  <span class="item-sub">On-chip hashing & encryption</span>
+  <span class="item-sub">
+  On-chip hashing and encryption to enforce privacy by design
+  </span>
 </div>
 
 <div class="item-group">
-  <span class="item-main">Zero-Cloud Footprint</span>
-  <span class="item-sub">Zero-Cloud exposure: Raw data stays on-chip, transmitting only refined insights</span>
+  <span class="item-main">Zero raw-data cloud exposure</span>
+  <span class="item-sub">
+  Raw signals remain on-device, with only refined and contextualized insights transmitted upstream
+  </span>
 </div>
 
 ---
@@ -188,27 +223,35 @@ Refining the Cloud pipeline at the Edge: Intelligence at the point of origin
 
 <div class="item-group">
   <span class="item-main">Feature Engineering</span>
-  <span class="item-sub">On-device feature extraction</span>
+  <span class="item-sub">
+  Extracting meaningful features directly on constrained devices
+  </span>
 </div>
 
 <div class="item-group">
   <span class="item-main">Anomaly Detection</span>
-  <span class="item-sub">Pattern recognition on signals</span>
+  <span class="item-sub">
+  Local pattern recognition to detect abnormal behavior in real time
+  </span>
 </div>
 
 <div class="item-group">
   <span class="item-main">Quantization</span>
-  <span class="item-sub">Compressing model weights without losing accuracy</span>
+  <span class="item-sub">
+  Reducing model size and compute requirements while preserving accuracy
+  </span>
 </div>
 
 ---
 
 # Towards Intelligent Edge
-<div class="lang-bar">To improve cloud data processes </div>
+<div class="lang-bar">
+Improving cloud data processes starts with better data at the source
+</div>
 
-**Which point is critical for your project?** <br><br>
+**Which of these challenges is most critical for your project?**
+
 <span class="item-sub no-wrap"> 
 Quel point est critique pour votre projet ? <br>
 Quale di questi punti è critico per il tuo progetto ?
 </span>
-<style>
