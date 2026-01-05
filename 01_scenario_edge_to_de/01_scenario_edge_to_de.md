@@ -61,7 +61,11 @@ style: |
   .small-lang { font-size: 0.8em; color: #a5adba; font-weight: normal; font-style: italic; display: block; }
 ---
 
-![bg opacity:.4 brightness:.35](./01_scenario_background.png)
+<!-- 
+![bg opacity:.4 brightness:.35](./01_scenario_background.png) 
+-->
+
+![bg opacity:0.4 brightness:0.35](./01_scenario_background.png)
 
 # From Edge to Refined Intelligence 
 <div class="lang-bar">Connecting a device is no longer enough to call it 'smart'. The real challenge lies in real-time data refining: 
@@ -70,8 +74,11 @@ style: |
   Dati orientati al Cloud direttamente dai dispositivi integrati
 </div>
 
-From Raw Physical Signals to Cloud-Ready Insights <span style="font-size: 0.7em; color: #a5adba; font-style: italic;">
-Physical Computing meets Cloud-Native Engineering <br> <br>
+<br>
+<span style="font-size: 0.5em; color: #a5adba; font-style: italic;">
+Here some critical challenges and opportunities where embedded systems 
+design directly impacts the effectiveness of real-time data engineering 
+at the edge <br> <br>
 
 ---
 
@@ -126,12 +133,12 @@ Refining the Cloud pipeline at the Edge: Intelligence at the point of origin
 
 ---
 
-## Sensori & Real-Time / Sensors
+## Sensors & Real-Time Data Processing
 <div class="line"></div>
 
 <div class="item-group">
   <span class="item-main">High-speed data streaming</span>
-  <span class="item-sub">Deterministic <1ms Latency: The high-speed handshake for Cloud-native pipelines</span>
+  <span class="item-sub">Low-latency data pipelines targeting deterministic sub-millisecond latency for real-time, cloud-native processing at the edge</span>
 </div>
 
 <div class="item-group">
