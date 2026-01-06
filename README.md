@@ -1,29 +1,42 @@
-# Posts: Data Engineering & Edge Computing Studies
-
+# Posts: Data Engineering Studies
 > **Study over data engineering topics.**
 
 This repository documents my journey in Data Engineering, bridging the gap between Edge Computing and Cloud ecosystems.
 
+---
+
 ### The Framework
-All my projects follow this **9-Point Data Engineering Framework** to ensure consistency, scalability, and optimization.
+![bg right:40% contain](schema_nine_points_de.png)
 
-![9-Point Data Engineering Framework](schema_nine_points_de.png)
 
-## 🎯 Objectives
-This is not just theory. Each scenario documented here represents a concrete step in mastering the data lifecycle:
-* **Architectural Schematics:** High-level system design.
-* **Technical Notes:** Implementation details and "Lessons Learned".
-* **Proof of Concepts:** Code snippets and configuration logic.
+### Data Engineering Framework with 9 Key Components
 
-📂 Content Index
-1. [Scenario 01] From Edge to Data Engineering
-Highlights embedded systems edge concepts to improve data engineer cloud processes. An architectural vision on how an Edge-aware mindset optimizes the Data Engineering lifecycle. This post bridges the gap between raw signals and structured data.
+| **Diagram Point**      | **Associated Tech Pillar**         | **Technical Role (AWS/GCP)**                      |
+| :------------------------- | :------------------------------------- | :---------------------------------------------------- |
+| **🏗️ Data STORAGE**        | **🌐 Object Storage / Warehouse**      | The core: S3/GCS and Redshift/BigQuery              |
+| **📦 Data COLLECTION**     | **📊 Streaming Ingestion**            | Data capture (MSK / Pub/Sub)                         |
+| **🔄 Data INGESTION**      | **☁️ Serverless ETL**                | Initial loading (Glue / Dataflow)                   |
+| **⚙️ Data PROCESSING**     | **🐘 Big Data Processing**            | Heavy transformations (Spark / EMR)                  |
+| **✅ Data QUALITY**         | **🔍 Serverless Compute**              | Code-based validation (Lambda / Functions)           |
+| **📈 Data ANALYTICS**      | **🏢 Data Warehouse (Analysis)**       | SQL queries for business insights                    |
+| **⚙️ AUTOMATION & OPTIMIZATION** | **🌪️ Managed Airflow**           | The orchestrator of data workflows              |
+| **🔒 SECURITY & GOVERNANCE**  | **🛠️ Infrastructure as Code**      | Terraform for permissions and policies (IAM)         |
+| **🗂️ LIFECYCLE MANAGEMENT**  | **🎭 Workflow Orchestration**       | Coordinates automated tasks (Step Functions)                 |
 
-2. [Scenario 02] Multi-Cloud Data Foundations: The "Memories" App
-Practical implementation of data processes using AWS and GCP. Documentation of the "Memories" application, showcasing the technical implementation of ingestion and storage. This scenario includes the official AWS Data Engineering Foundations and Google Cloud certifications achieved during the development.
 
-3. [Scenario 03] Data Storage Optimization: CSV vs. Parquet
-Efficiency analysis in data lake environments. A deep dive into file formats, comparing row-based vs. columnar storage to optimize query performance and cloud storage costs. This scenario demonstrates how choosing the right format impacts the entire data pipeline efficiency.
+This core structure facilitates a clear separation of concerns between raw signals and structured business 
+intelligence, ensuring consistency, scalability, and optimization.
 
 ---
-*Follow the progress as I transition from Signal-to-Data to actionable Business Intelligence.*
+
+## 🎯 Objectives & Index
+
+* **Architectural Schematics:** High-level system design.
+* **Technical Notes:** Implementation details.
+
+**📂 Content Index**
+1. **[Scenario 01]** From Edge to Data Engineering
+2. **[Scenario 02]** Payload Optimization (Bandwidth)
+3. **[Scenario 03]** Data Governance (TinyML MLOps)
+
+---
