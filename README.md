@@ -3,6 +3,10 @@
 
 This repository documents my journey in Data Engineering, bridging the gap between Edge Computing and Cloud ecosystems.
 
+I'm documenting a comprehensive investigation into the entire edge-to-cloud data engineering pipeline. 
+
+Check it out if you're working with industrial IoT data!
+
 ---
 
 ### The Framework
@@ -36,7 +40,8 @@ intelligence, ensuring consistency, scalability, and optimization.
 
 **📂 Content Index**
 1. **[Scenario 01]** From Edge to Data Engineering
-2. **[Scenario 02]** Payload Optimization (Bandwidth)
-3. **[Scenario 03]** Data Governance (TinyML MLOps)
+2. **[Scenario 02]** Enhancing Pipeline Efficiency : MTU and Jumbo Frames for Edge Network Optimization 
+3. **[Scenario 03]** Payload Optimization: Smart Compression of Raw Signals to Reduce Bandwidth and Storage Costs
+3. **[Scenario 04]** Deploying Traffic Controllers: Prioritizing Critical Data for Enhanced QoS
 
 ---
