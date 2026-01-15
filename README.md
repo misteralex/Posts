@@ -1,9 +1,7 @@
 # Posts: Data Engineering Studies
 **Study over data engineering topics.**
 
-This repository documents my journey in Data Engineering, bridging the gap between Edge Computing and Cloud ecosystems.
-
-I'm documenting a comprehensive investigation into the entire edge-to-cloud data engineering pipeline. 
+This repository documents my journey in Data Engineering, bridging the gap between Edge Computing and Cloud ecosystems. I'm documenting a comprehensive investigation into the entire edge-to-cloud data engineering pipeline. 
 
 Check it out if you're working with industrial IoT data!
 
