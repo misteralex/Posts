@@ -14,29 +14,15 @@ This scenario explores how **embedded systems** and **edge concepts** (like dete
 * [Downloadable PDF version](01_scenario_edge_to_de.pdf)
 
 ---
-*Part of the 9-Point Data Engineering Framework series.*
 
 ## 🚀 The Vision: Why Edge?
-Most people think Edge Computing is just a hardware constraint. In this project, I demonstrate that it is the next frontier of **Data Engineering**. Refining data at the source (on-chip) is a game-changer for Cloud architectures, reducing latency, costs, and ensuring privacy by design.
+Most people think Edge Computing is just a hardware constraint. Here are some use cases regarding the next frontier of data engineering: refining data at the source (on-chip). This approach is a game-changer for cloud architectures, reducing latency and costs while ensuring privacy by design.
 
 ### Key Concepts:
 * **Raw Material**: Transforming high-frequency sensor streams (IMU, Audio, Power).
 * **Edge Processing**: DSP, FFT, and Signal Filtering.
 * **TinyML**: Deploying miniaturized AI for real-time local inference.
 * **Cloud Integration**: Seamlessly syncing smart payloads with AWS and GCP stacks.
-
----
-
-## 📊 LinkedIn Launch Strategy
-*Below is the copy used for the LinkedIn post associated with this carousel.*
-
-**ENGLISH (Global Hook)**: From Edge to Refined Intelligence: Intelligence at the point of origin 🚀 Connectivity is just the baseline. The real frontier of Data Engineering lies in signal refining at the source, operating on milliwatts while ensuring total privacy. Check the slides below for the full 9-point framework!
-
-**FRANÇAIS (Context)**: L'Edge n'est pas seulement une question de hardware, c'est l'avenir du Data Engineering. Raffiner la donnée directement à la source change la donne pour l'architecture Cloud.
-
-**ITALIANO (Context)**: Portare la raffinazione del dato alla sorgente cambia le regole del gioco nel Cloud. Non è solo hardware, è Data Engineering applicato direttamente ai segnali fisici.
-
-**STRATEGIC TAGS**: #DataEngineering #EdgeAI #TinyML #CloudNative #IoT #EmbeddedSystems #DataArchitecture
 
 ---
 
