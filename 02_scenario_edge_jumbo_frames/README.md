@@ -72,4 +72,4 @@ Experimental data from University College Dublin shows a drastic drop in relativ
 ---
 
 # Find the Technical Deep Dive on GitHub
-### /Posts/03_scenario_edge_jumbo_frames
+### /Posts/02_scenario_edge_jumbo_frames
