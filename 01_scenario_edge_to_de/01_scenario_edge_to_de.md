@@ -34,11 +34,13 @@ style: |
   footer {
     display: block !important;
     position: absolute !important;
-    bottom: 30px !important;
-    left: 50px !important;
-    font-size: 27px !important;
+    top: 15px !important;
+    right: 30px !important;
+    left: auto !important;
+    font-size: 18px !important;
     font-weight: 900 !important;
     color: #58a6ff !important;
+    z-index: 1000;
   }
   h1 { color: #58a6ff; font-size: 1.6em; margin-bottom: 5px; }
   h2 { color: #58a6ff; font-size: 1.3em; margin-bottom: 5px; }
@@ -82,9 +84,16 @@ style: |
 
 ---
 
-![bg opacity:0.4 brightness:0.35](./01_scenario_background.png)
+![bg opacity:0.4 brightness:0.35](./../scenario_background.png)
 
-# <span class="main-title">Smart Edge for Cloud-Ready Data</span>
+# <span class="main-title">Smart Edge <br>for Cloud-Ready Data</span>
+<div class="lang-bar">
+  Real-time data processing at the edge, built for privacy and efficiency
+</div>
+</span>
+
+---
+
 <div class="lang-bar">
   Connecting a device is no longer enough to call it 'smart'. 
   The real challenge lies in real-time data refining: 
@@ -103,15 +112,15 @@ design directly impacts the effectiveness of real-time data engineering at the e
 ---
 
 <div class="grid-9">
-  <div class="grid-item"><strong>DATA COLLECTION <br> (Source)</strong><span>Capturing raw signals at the point of origin</span></div>
-  <div class="grid-item"><strong>DATA INGESTION <br> (Pipeline)</strong><span>Efficiently moving bits into local memory</span></div>
-  <div class="grid-item"><strong>DATA PROCESSING <br> (Refining)</strong><span>Transforming noisy waveforms into structured, meaningful features</span></div>
-  <div class="grid-item"><strong>DATA QUALITY <br> (Validation)</strong><span>Ensuring integrity before any data leaves the device</span></div>
-  <div class="grid-item"><strong>DATA STORAGE <br> (Persistence)</strong><span>Local buffering and temporary storage for fault-tolerant streaming</span></div>
-  <div class="grid-item"><strong>DATA ANALYTICS <br> (Intelligence)</strong><span>Lightweight computation at the milliwatt level, near the sensor</span></div>
-  <div class="grid-item"><strong>DATA TRANSFORMATION <br> (SYNTHESIS)</strong><span>Compressing and enriching data to high-value payloads</span></div>
-  <div class="grid-item"><strong>DATA INTEGRATION <br> (Transport)</strong><span>Sending only refined, relevant data to the cloud</span></div>
-  <div class="grid-item"><strong>DATA GOVERNANCE <br> (Lifecycle)</strong><span>Managing versions, metadata, and signal health on the edge</span></div>
+  <div class="grid-item"><strong>DATA COLLECTION <br> (Source) </strong><span>Capturing raw signals at the point of origin</span></div>
+  <div class="grid-item"><strong>DATA INGESTION <br> (Pipeline) </strong><span>Efficiently moving bits into local memory</span></div>
+  <div class="grid-item"><strong>DATA PROCESSING <br> (Refining) </strong><span>Transforming noisy waveforms into structured, meaningful features</span></div>
+  <div class="grid-item"><strong>DATA QUALITY <br> (Validation) </strong><span>Ensuring integrity before any data leaves the device</span></div>
+  <div class="grid-item"><strong>DATA STORAGE <br> (Persistence) </strong><span>Local buffering and temporary storage for fault-tolerant streaming</span></div>
+  <div class="grid-item"><strong>DATA ANALYTICS <br> (Intelligence) </strong><span>Lightweight computation at the milliwatt level, near the sensor</span></div>
+  <div class="grid-item"><strong>DATA TRANSFORMATION <br> (SYNTHESIS) </strong><span>Compressing and enriching data to high-value payloads</span></div>
+  <div class="grid-item"><strong>DATA INTEGRATION <br> (Transport) </strong><span>Sending only refined, relevant data to the cloud</span></div>
+  <div class="grid-item"><strong>DATA GOVERNANCE <br> (Lifecycle) </strong><span>Managing versions, metadata, and signal health on the edge</span></div>
 </div>
 
 ---
