@@ -35,7 +35,7 @@ Most people think Edge Computing is just a hardware constraint. Here are some us
 
 ---
 
-### 🔬 References & Scientific Validation
+### 🔬 Edge & Cloud Computing References
 Top edge computing trends for 2026: as edge computing continues to evolve, industry analysts and practitioners are identifying the key 
 trends shaping the landscape ahead.
 
