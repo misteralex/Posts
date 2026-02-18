@@ -39,7 +39,7 @@ intelligence, ensuring consistency, scalability, and optimization.
 **📂 Content Index**
 1. **[Scenario 01]** From Edge to Data Engineering
 2. **[Scenario 02]** Enhancing Pipeline Efficiency : MTU and Jumbo Frames for Edge Network Optimization 
-3. **[Scenario 03]** Payload Optimization: Smart Compression of Raw Signals to Reduce Bandwidth and Storage Costs
+3. **[Scenario 03]** Payload Optimization: Enhancing Pipeline Efficiency
 3. **[Scenario 04]** Deploying Traffic Controllers: Prioritizing Critical Data for Enhanced QoS
 
 ---
