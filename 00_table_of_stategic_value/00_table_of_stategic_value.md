@@ -116,16 +116,20 @@ Each phase highlights the critical concepts and operational challenges required 
 
 | Phase | Core Checklist Terms |
 | :--- | :--- |
-| **1. Inception** | Noise Suppression, Event Time, Clock Skew, Sampling, Idempotency |
-| **2. Transit** | Backpressure, Bandwidth Optimization, Packet Loss |
-| **3. Contract** | Binary Framing, Data Contract, Schema Evolution, Deduplication |
-| **4. Landing** | Data Tiering, Ingestion Time, Lineage, Latency |
+| **1. Inception** | Idempotency, Data Lineage, Noise Suppression, Event Time, 
+|                  | Clock Skew, Sampling |
+| **2. Transit** | Idempotency, Backpressure, Observability (Traffic/Flow), 
+|                | Bandwidth Optimization, Packet Loss |
+| **3. Contract** | Deduplication, Data Lineage, Observability (Validation Errors), 
+|                 | Binary Framing, Data Contract, Schema Evolution |
+| **4. Landing** | Deduplication, Data Lineage, Observability (Quality/Latency), 
+|                | Data Tiering, Ingestion Time, Latency |
 
 
 ---
 
 ##### **PHASE 1:** Data Inception Synthesis
-###### Noise Suppression | Event Time | Clock Skew | Sampling | Idempotency
+###### Idempotency | Data Lineage |Noise Suppression | Event Time | Clock Skew | Sampling
 
 <div class="clean-list">
 
@@ -143,7 +147,7 @@ Each phase highlights the critical concepts and operational challenges required 
 ---
 
 ##### **PHASE 2:** Data Transit (Physical Transport)
-###### Backpressure | Bandwidth Optimization | Packet Loss
+###### Idempotency | Backpressure | Observability (Traffic/Flow) | Bandwidth Optimization | Packet Loss
 
 <div class="clean-list">
 
@@ -161,7 +165,7 @@ Each phase highlights the critical concepts and operational challenges required 
 ---
 
 ##### **PHASE 3:** Governance & Interface (The Contract)
-###### Binary Framing | Data Contract | Schema Evolution | Deduplication
+###### Deduplication | Data Lineage | Observability (Validation Errors) | Binary Framing | Data Contract | Schema Evolution
 
 <div class="clean-list">
 
@@ -179,7 +183,7 @@ Each phase highlights the critical concepts and operational challenges required 
 ---
 
 ##### **PHASE 4:** Cloud Landing (Storage & Economics)
-###### Data Tiering | Ingestion Time | Lineage | Latency
+###### Deduplication | Data Lineage | Observability (Quality/Latency) | Data Tiering | Ingestion Time | Latency
 <div class="clean-list">
 
 - <b>📊 Ingestion & Resilient Writing</b>

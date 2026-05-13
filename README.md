@@ -98,36 +98,40 @@ For a deep-dive into each technical tag, refer to the individual documentation f
 
 ---
 <br>
-
 # 🚀 Edge-to-Cloud Architectural Checklist
 
-### 🛡️ 1. Robustness & Reliability (The "Holy Grail")
-* **IDEMPOTENCY**: The ability to perform the same operation multiple times with the same result. Crucial when a sensor retries a transmission because it didn't receive a Cloud ACK, preventing the system from processing duplicate records.
-* **DEDUPLICATION**: The process of identifying and removing identical records. This can occur at the **Edge** (to save bandwidth) or in the **Cloud** (to clean the dataset for AI/Analytics).
-* **BACKPRESSURE**: A flow-control mechanism where a downstream system (Cloud) signals the upstream (Gateway/Sensor) to slow down the transmission rate because it cannot process the current load. It prevents buffer overflows and system crashes.
+### 🛡️ 1. Inception: Robustness & Temporal Integrity
+* **NOISE SUPPRESSION**: Applying firmware-level signal conditioning (Low-pass/High-pass filters) to ensure the AI model receives high-entropy data rather than electrical interference.
+* **EVENT TIME vs. INGESTION TIME**: The distinction between when an event occurred (Event Time) versus when it reached the database (Ingestion Time). Event Time is the only ground truth for AI.
+* **CLOCK SKEW**: The time discrepancy between sensors. Without synchronization (NTP/PTP), reconstructing event sequences becomes impossible.
+* **IDEMPOTENCY**: The ability to perform the same operation multiple times with the same result. Prevents duplicate record processing during transmission retries.
+* **DATA LINEAGE**: Full traceability of a data point, including sensor ID, firmware version, and gateway path—essential for auditing and debugging.
 
 ---
 
-### ⏱️ 2. Temporal Integrity
-* **CLOCK SKEW**: The time discrepancy between different sensors' internal clocks. Without synchronization (**NTP/PTP**), reconstructing the exact sequence of events from 100+ different sensors becomes a logical nightmare.
-* **EVENT TIME vs. INGESTION TIME**: The distinction between when an event actually occurred at the sensor level (**Event Time**) versus when it reached the database (**Ingestion Time**). For AI and predictive models, Event Time is the only ground truth.
+### 📡 2. Transit: Network Efficiency & Flow Control
+* **IDEMPOTENCY**: (See Phase 1) Ensures network-level retries do not result in duplicate records.
+* **BACKPRESSURE**: A flow-control mechanism where downstream systems (Cloud) signal the upstream (Gateway) to slow down, preventing buffer overflows.
+* **BANDWIDTH OPTIMIZATION**: The strategy of sending data "better" rather than "less," using **Delta Encoding** to transmit only changes between readings.
+* **OBSERVABILITY**: The active monitoring of system health. In this phase, it focuses on **Latency** (time-to-transit) and **Packet Loss** (data drop rate).
 
 ---
 
-### 💰 3. Cloud Economics (Efficiency & Savings)
-* **BINARY FRAMING (Compression)**: Replacing verbose formats like JSON/CSV with binary formats such as **Protobuf** or **Avro**. This reduces the payload size by **70-90%**, directly slashing data transit and storage costs.
-* **DATA TIERING**: Defining data "temperature." Fresh data resides in **Hot Storage** (expensive but fast), while historical data moves to **Cold/Glacier Storage** (cheap) for compliance or future model retraining.
-* **SAMPLING / FILTERING**: Deciding at the Edge what to ignore. If a temperature sensor reads a steady 20.0°C for an hour, there is no need to transmit 3,600 identical messages.
-* **BANDWIDTH OPTIMIZATION**: While sampling is a technique, this is the overarching strategy. It involves sending data "better," not just "less," often utilizing **Delta Encoding** (sending only the changes between readings) to minimize the network footprint.
-* **NOISE SUPPRESSION**: Applying firmware-level signal conditioning (Low-pass/High-pass filters) to ensure the AI model receives high-entropy data rather than electrical interference or parasitic vibrations.
+### 📝 3. Contract: Governance & Interoperability
+* **DATA CONTRACT**: A formal agreement on data schema. Prevents "Silent Failures" where firmware updates change field types and break the Cloud pipeline.
+* **SCHEMA EVOLUTION**: The capacity to handle different data structure versions (e.g., adding a "battery_level" field) without losing backward compatibility.
+* **DEDUPLICATION**: The process of identifying and removing identical records based on defined contract rules.
+* **OBSERVABILITY**: (See Phase 2) In this phase, it monitors **Validation Errors** to ensure data conforms to the agreed schema.
+* **BINARY FRAMING**: Replacing verbose formats (JSON/CSV) with binary ones (Protobuf/Avro) to reduce payload size by 70-90%.
+* **DATA LINEAGE**: (See Phase 1) Continues to track the provenance of the data as it is packaged for the Cloud.
 
 ---
 
-### ⚖️ 4. Governance, Contracts & Observability
-* **DATA CONTRACT**: A formal agreement on the data schema. This prevents **Silent Failures**, where a sensor firmware update changes a field type or name, inadvertently breaking the entire downstream Cloud pipeline.
-* **SCHEMA EVOLUTION**: The architecture's capacity to handle different versions of the same data structure (e.g., adding a "battery_level" field in a new version) without losing backward compatibility or breaking historical data integrity.
-* **DATA LINEAGE**: Full traceability of a data point. Knowing exactly which sensor, firmware version, and gateway produced a specific record—essential for auditing and debugging AI models.
-* **OBSERVABILITY**: It is not enough for the data to arrive; you must monitor how long it takes (**Latency**) and how much is lost along the way (**Packet Loss**). In Edge-to-Cloud environments, observability is the only tool that can explain why data from "yesterday" might be missing.
+### ☁️ 4. Landing: Data Economics & Final Assurance
+* **OBSERVABILITY**: (See Phase 2) Here, it focuses on **End-to-End Latency** and long-term **Data Quality** metrics.
+* **DEDUPLICATION**: (See Phase 3) The final enforcement of uniqueness at the database level to ensure a clean dataset for AI/Analytics.
+* **DATA LINEAGE**: (See Phase 1) The final audit trail documenting the complete journey of a record for future retraining or compliance.
+* **DATA TIERING**: Managing data "temperature." Fresh data stays in **Hot Storage** (fast/expensive) while historical data moves to **Cold/Glacier Storage** (cheap) for long-term retention.
 
 ---
 ## 🎯 Objectives & Index
