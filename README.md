@@ -74,7 +74,7 @@ For a deep-dive into each technical tag, refer to the individual documentation f
 ## Objective: Optimize bit movement and preserve the computational health of gateways.
 - Network Orchestration (Jumbo Frames): MTU alignment to 9000 to eliminate "Interrupt Storms" and free up CPU cycles. [[Read Post 2](02_scenario_edge_jumbo_frames/README.md)]
 - Traffic Prioritization (DSCP/QoS): Packet labeling to prioritize critical alerts over historical logs. [[Read Post 4](04_scenario_edge_qos/README.md)]
-- Jitter Stabilization: Buffering strategies to ensure consistent streams for streaming engines (Kafka/Flink).
+- Jitter Stabilization: Buffering strategies to ensure consistent streams for streaming engines (Kafka/Flink). [[Read Post 6](06_scenario_edge_kafka/README.md)]
 - Flow Control (Backpressure): Saturation management via local Store-and-Forward logic.
 - Bandwidth Optimization: L3/L4 compression to reduce the packet footprint across the network.
 
